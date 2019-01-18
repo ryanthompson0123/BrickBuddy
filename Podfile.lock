@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (4.8.0)
+  - Hero (1.4.0)
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
+  - Kingfisher (5.0.0)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Result (4.0.0)
+  - SwiftLint (0.29.1)
+  - XMLCoder (0.2.1)
+
+DEPENDENCIES:
+  - Hero (~> 1.4.0)
+  - IGListKit (~> 3.0)
+  - Kingfisher (~> 5.0)
+  - Moya (~> 12.0)
+  - SwiftLint (~> 0.29.1)
+  - XMLCoder (~> 0.2.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Hero
+    - IGListKit
+    - Kingfisher
+    - Moya
+    - Result
+    - SwiftLint
+    - XMLCoder
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  Kingfisher: 2b0dd651e4fe5a07305b8242fde56f8e2d410f58
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
+  XMLCoder: 6dd0b200c80fb3d26eaf697ce4e92c1943d112ff
+
+PODFILE CHECKSUM: a06832a774419b34f1ae6a16ef7d31094ec1fe47
+
+COCOAPODS: 1.5.3
