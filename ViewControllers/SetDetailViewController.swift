@@ -9,10 +9,15 @@
 import UIKit
 import Kingfisher
 import IGListKit
+import Moya
 
 class SetDetailViewController: UIViewController, ListAdapterDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    lazy var provider: MoyaProvider<BricksetService> = {
+        return Providers.getBricksetProvider()
+    }()
     
     var set: BricksetSet?
     
@@ -45,7 +50,19 @@ class SetDetailViewController: UIViewController, ListAdapterDataSource {
     }
     
     func loadAdditionalData() {
-        
+        provider.request(.getSetsByYear(year: "2018", orderBy: "YearFromDESC", pageSize: 21, page: nextPage)) { result in
+            switch result {
+            case let .success(moyaResponse):
+                let envelope = try? XMLDecoder().decode(BricksetGetSetsEnvelope.self, from: moyaResponse.data)
+                
+                guard let sets = envelope?.body.response.result.sets else { return }
+                self.items.append(contentsOf: sets)
+                self.nextPage = self.nextPage + 1
+                self.adapter.performUpdates(animated: true, completion: nil)
+                break
+            case .failure(_):
+                break
+            }
     }
 
     

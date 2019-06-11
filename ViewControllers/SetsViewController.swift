@@ -16,7 +16,7 @@ class SetsViewController: UIViewController, ListAdapterDataSource, UIScrollViewD
     @IBOutlet weak var collectionView: UICollectionView!
     
     lazy var provider: MoyaProvider<BricksetService> = {
-        return MoyaProvider<BricksetService>(plugins: [SoapApiKeyPlugin(apiKey: "")])
+        return Providers.getBricksetProvider()
     }()
     
     lazy var items: [BricksetSet] = Array()
